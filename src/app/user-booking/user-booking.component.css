@@ -1,0 +1,25 @@
+.booking-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove spacing between cells */
+    margin: 20px 0; /* Margin for spacing */
+    font-family: Arial, sans-serif; /* Font family */
+}
+
+.booking-table th, .booking-table td {
+    border: 1px solid #ddd; /* Border for cells */
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+.booking-table th {
+    background-color: #f2f2f2; /* Light grey background for header */
+    font-weight: bold; /* Bold font for headers */
+}
+
+.booking-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for even rows */
+}
+
+.booking-table tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}

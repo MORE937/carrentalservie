@@ -1,0 +1,30 @@
+
+
+<h2>Login Here</h2>
+
+<form [formGroup]="form1" (ngSubmit)="loginUser()">
+
+    <label for="user">Username</label>
+    <input type="text" placeholder="Enter UserName"  [class.is-invalid]="f['username'].invalid"       formControlName="username">
+    <br><br>
+    <label for="pass">Password</label>
+    <input type="password" placeholder="Enter UserName"  formControlName="password">
+    <br><br>
+   <button type="submit">Login user</button>
+
+</form>  
+ <button (click)="OpenFormAdmin()"  style="width: 300px; margin-left: 500px;">Admin Login Here</button>
+<div *ngIf="enter">
+ 
+  <form #form="ngForm" (ngSubmit)="AdminLogin()" [formGroup]="adminLoginForm">
+    <label for="">Admin Name</label>
+    <input type="text" placeholder="Enter name" formControlName="adminName">
+    <br><br>
+    <label for="">Password</label>
+    <input type="password" placeholder="Enter Password" formControlName="adminPass">
+    <br><br>
+    <button type="submit" class="submit">Submit</button>
+
+  </form>
+</div>
+

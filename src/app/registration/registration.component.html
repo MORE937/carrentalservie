@@ -1,0 +1,21 @@
+
+<h1 class="registration">{{title}}</h1>
+
+<form #myform="ngForm" (ngSubmit)="RegisterHere()">
+ <div>
+  <label for="">Username:</label>
+  <input type="text" placeholder="Enter Name" name="UserName" #name="ngModel" [(ngModel)]="Rusername" ngModel required>
+  <br><br>
+  <label for="">Password :</label>
+  <input type="password" placeholder="Create Password" name="Password" #pass="ngModel" [(ngModel)]="Rpassword" ngModel required>
+  <br><br>
+  <label for="">Gmail :</label>
+  <input type="email" placeholder="Enter Gmail" name="Gmail" #gmail="ngModel" [(ngModel)]="Rgamil" ngModel required>
+  <br><br>
+
+  <button style="margin: 20px;" [disabled]="myform.invalid">Register</button>
+
+ 
+ </div>
+
+</form>

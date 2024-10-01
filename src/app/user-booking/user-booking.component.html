@@ -1,0 +1,44 @@
+<p>user-booking works!</p>
+<!-- <ul>
+    <li *ngFor="let data of booking">
+        {{data.userId}}
+
+    </li>
+</ul> -->
+
+    <!-- <div *ngFor="let bookingData of booking">
+        <label>Your Booking</label>
+        <h3>{{bookingData.userId}}</h3><br> 
+        <h3>{{bookingData.carId}}</h3><br>  
+        <h3>{{bookingData.startDate}}</h3><br>  
+        <h3>{{bookingData.endDate}}</h3><br>  
+        <h3>{{bookingData.cost}}</h3><br>   
+        <h3>{{bookingData.status}}</h3><br>   
+    </div> -->
+
+    <div *ngIf="booking.length">
+        <table class="booking-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Car ID</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Cost</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bookingData of booking">
+                    <td>{{bookingData.userId}}</td>
+                    <td>{{bookingData.carId}}</td>
+                    <td>{{bookingData.startDate}}</td>
+                    <td>{{bookingData.endDate}}</td>
+                    <td>{{bookingData.cost}}</td>
+                    <td>{{bookingData.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+  

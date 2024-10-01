@@ -1,0 +1,40 @@
+ 
+     <div class="container">
+      <div class="row">
+         <div class="col-md-6 mt-3 ms-5  ">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="search here" [(ngModel)]="searchCar" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            
+          </div>
+         </div>
+        
+      </div>
+     </div>
+ 
+ <div class="container mt-5 ">
+       
+ <div class="header-card-container">
+  <div class="row">
+  <div *ngFor="let list of carlist | carfilter:searchCar" class="header-card">
+
+      <div class="col-3">
+         <img [src]="'data:image/png;base64,'+list.fileName" class="img-fluid rounded" alt="Car Image">
+      </div>
+      
+    <div class="header-card-text">
+      <h5 class="card-title " >Car Name : {{list.carName}}</h5>
+      <p class="card-text text-center" >Car color : {{list.selectColor}}</p>
+      <p class="card-text text-center" >Car transmmision : {{list.selectTransmmition}}</p>
+      <p class="card-text text-center" >Car type : {{list.selectType}}</p>
+      <p class="card-text text-center" >Car model : {{list.modelYear}}</p>
+      <p class="card-text text-center" >price: {{list. price}}</p>
+    </div> 
+    
+     <button routerLink="/adminD/car-update/{{list.id}}">update</button> <button (click)="deleteCar(list.id)">delete</button>
+  </div>
+
+</div> 
+</div>
+
+</div>

@@ -1,0 +1,46 @@
+
+      <div>
+        <div>
+            <label for="userId">User Id</label>
+            <h2 id="userId">{{userID}}</h2>
+        </div>
+        <div>
+             <label for="name">Car Name</label>
+             <h2 id="name">{{carId}}</h2>
+        </div>
+        <div>
+            <label for="price">Car Price</label>
+            <h2 id="price">{{carPrice}}</h2>
+        </div>
+        <div>
+            <label for="start">Start Date</label>
+            <input type="date" [(ngModel)]="carStartDate">
+        </div>
+        <div>
+            <label for="end">End Date</label>
+            <input type="date" [(ngModel)]="carEndDate">
+        </div>
+        <div *ngIf="findTheCost">
+          <label for="cost">Total Cost</label>
+          <h3>{{cost}}</h3>
+        </div>
+        <div>
+            <button (click)="checkNumberOfDays()" *ngIf="checkButton">Check</button>
+        </div>
+        <div>
+            <button *ngIf="bookButton" (click)="bookCar()">Book</button>
+        </div>
+      </div>
+
+      <div *ngIf="bookingDiv">
+        <div>
+            <label>Your Booking</label>
+            <h3>{{bookingData.userId}}</h3><br> 
+            <h3>{{bookingData.carId}}</h3><br>  
+            <h3>{{bookingData.startDate}}</h3><br>  
+            <h3>{{bookingData.endDate}}</h3><br>  
+            <h3>{{bookingData.cost}}</h3><br>   
+            <h3>{{bookingData.status}}</h3><br>   
+        </div>
+      </div>
+
